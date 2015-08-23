@@ -8,5 +8,5 @@ class User < ActiveRecord::Base
   def has_role?(name)
     self.roles.where(name: name).length > 0
   end
-  mount_uploader :user_icon, ImageUploader
+  mount_uploader :icon, ImageUploader
 end

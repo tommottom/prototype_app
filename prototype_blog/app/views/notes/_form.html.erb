@@ -30,10 +30,10 @@
     <%= error_span(@note[:introduction]) %>
   </div>
   <div class="form-group">
-        <%= f.label :user_icon %>
-        <%= image_tag @note.note_image.thumb.url if @note.note_image? %>
-        <%= f.file_field :note_image %>
-        <%= f.hidden_field :note_image_cache %>
+        <%= f.label :image %>
+        <%= image_tag @note.image.url if @note.image? %>
+        <%= f.file_field :image %>
+        <%= f.hidden_field :image_cache %>
       </div>
   
 

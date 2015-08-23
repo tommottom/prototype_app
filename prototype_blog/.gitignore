@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+/public/uploads
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -15,7 +16,6 @@
 /log/*
 !/log/.keep
 /tmp
-
 # Ignore other unneeded files.
 doc/
 *.swp

@@ -20,7 +20,7 @@ class NotesController < ApplicationController
   # GET /notes/1/edit
   def edit
     @note = Note.find(params[:id])
-    @note.note_image.cache! unless @note.note_image.blank?
+    @note.image.cache! unless @note.image.blank?
   end
 
   # POST /notes
@@ -110,6 +110,6 @@ class NotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :introduction, :note_image)
+      params.require(:note).permit(:title, :introduction, :image)
     end
 end

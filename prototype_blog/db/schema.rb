@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150823020937) do
   create_table "notes", force: :cascade do |t|
     t.string   "title"
     t.string   "introduction"
-    t.string   "note_image"
+    t.string   "image"
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20150823020937) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "user_icon"
+    t.string   "name"
+    t.string   "icon"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

@@ -8,8 +8,8 @@
   <dd><%= @note.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:introduction) %>:</strong></dt>
   <dd><%= @note.introduction %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:note_image) %>:</strong></dt>
-  <dd><%= image_tag @note.note_image.url %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:image) %>:</strong></dt>
+  <dd><%= image_tag @note.image.url %></dd>
   <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
   <dd><%= @note.user_id %></dd>
 </dl>
