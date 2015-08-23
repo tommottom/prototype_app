@@ -19,6 +19,8 @@ class NotesController < ApplicationController
 
   # GET /notes/1/edit
   def edit
+    @note = Note.find(params[:id])
+    @note.note_image.cache! unless @note.note_image.blank?
   end
 
   # POST /notes

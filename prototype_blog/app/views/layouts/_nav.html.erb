@@ -10,6 +10,14 @@
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
+          <li><%= current_user.username %></li>
+          <li>
+            <% if current_user.user_icon? %>
+              <%= image_tag current_user.user_icon.thumb.url, :size => "50x50" %>
+            <% else %>
+              <%= image_tag '/image/noimage.gif', :size => "50x50" %>
+            <% end %>
+          </li>
           <li><%= link_to 'プロフィール編集', edit_user_registration_path %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
         <% else %>
