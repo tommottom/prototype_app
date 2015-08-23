@@ -36,13 +36,7 @@
     </div>
     <%= error_span(@note[:note_image]) %>
   </div>
-  <div class="control-group">
-    <%= f.label :user_id, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :user_id, :class => 'form-control' %>
-    </div>
-    <%= error_span(@note[:user_id]) %>
-  </div>
+  
 
 
   <%= f.submit nil, :class => 'btn btn-primary' %>
